@@ -233,6 +233,11 @@ description:__VA_ARGS__];                             \
 //NSUserDefaults 实例化
 #define USER_DEFAULT [NSUserDefaults standardUserDefaults]
 
+// 沙盒
+#define CACHES_DIRECTORY  [NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES) objectAtIndex:0];
+#define DOCUMENT_DIRECTORY [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory,NSUserDomainMask, YES) objectAtIndex:0];
+#define TEMP_DIRECTORY NSTemporaryDirectory();
+#define HOME_DIRECTORY NSHomeDirectory()
 
 //由角度获取弧度 有弧度获取角度
 #define degreesToRadian(x) (M_PI * (x) / 180.0)
